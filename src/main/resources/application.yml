@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: hello-world-spring
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+
+info:
+  app:
+    name: Hello World Spring App
+    description: My first Spring App from yml
+    version: 1.0.0
