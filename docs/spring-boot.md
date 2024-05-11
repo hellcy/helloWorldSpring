@@ -70,3 +70,8 @@
 
 ## Running Spring app using CLI
 - use Spring Boot Maven plugin: `mvnw spring-boot:run`
+
+## Injecting Custom Application Properties
+- default properties file is `application.properties`, I already changed it to `application.yml`
+- you can define ANY custom properties in this file
+- Spring app can access properties using `@Value`
