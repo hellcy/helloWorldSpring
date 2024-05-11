@@ -15,7 +15,7 @@
 ## Project structure
 - pom.xml: your shopping list, Maven will download JAR files based on this file.
 - Maven wrapper files: mvnw allows you to run a Maven project, you don't need to install Maven locally
-- application.properties: property values can be injected to application using @Value annotation
+- application.yml: property values can be injected to application using @Value annotation
 - java: java source code
 - resources: properties and config files used by your app
 - test: testing code
@@ -56,10 +56,17 @@
 - Normally used by monitoring apps to see if your app is up or down
 
 ### Info endpoint
-- `/info` endpoint is not by default exposed, we need to specify that in the application.properties file
-- other properties starts with `info` in the application.properties file will be displayed 
+- `/info` endpoint is not by default exposed, we need to specify that in the application.yml file
+- other properties starts with `info` in the application.yml file will be displayed 
 
 ### Other endpoints
 - `/auditevents` audit events for your application
 - `/beans` list of all beans registered in the Spring application context
 - `/mappings` list of all @RequestMapping paths
+
+## Spring Security
+- Spring security can be used to security endpoints, prevent access for unauthorized users
+- default username and password can be overridden in yml file
+
+## Running Spring app using CLI
+- use Spring Boot Maven plugin: `mvnw spring-boot:run`

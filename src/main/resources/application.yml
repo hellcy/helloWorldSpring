@@ -1,12 +1,16 @@
 spring:
   application:
     name: hello-world-spring
+  security:
+    user:
+      name: Yuan
+      password: 123
 
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "*" # Exposing all actuator endpoints
   info:
     env:
       enabled: true
@@ -14,8 +18,13 @@ management:
     health:
       show-details: always
 
+# for Spring Actuator info endpoint
 info:
   app:
     name: Hello World Spring App
     description: My first Spring App from yml
     version: 1.0.0
+
+
+
+
