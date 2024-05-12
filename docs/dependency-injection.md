@@ -26,3 +26,7 @@
 - Spring scans Main Spring Boot Application class and all sub-packages underneath that
 - When Spring wants to inject Coach implementation, it will scan for `@Component`
 - When they find an implementation, it will inject it e.g. CricketCoach
+
+## Qualifier
+- tell Spring which implementation to use when there are multiple available
+- Qualifier name is the name of the implementation class, except for the first character is lowercase
