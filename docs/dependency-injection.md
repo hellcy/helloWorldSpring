@@ -61,3 +61,10 @@
 ## Bean Lifecycle methods
 - You can add custom code during bean initialization/destruction
 - add `@PostConstruct` or `@PreDestroy` on a method
+
+## Bean config
+- Apart from using `@Component` to define a bean, we could also use `@Configuration` class and `@Bean` method to provide a bean to Spring
+- use case for `@Bean`
+  - make an existing third party class available to Spring
+  - you may not have access to the source code of third party class
+  - however, you would like to use the third party class as a Spring bean

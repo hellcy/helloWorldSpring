@@ -18,7 +18,7 @@ public class DemoController {
     // Spring will scan all available components and inject automatically
     // if you only have one constructor, then @Autowired annotation is optional
     @Autowired
-    public DemoController(@Qualifier("cricketCoach") Coach coach) {
+    public DemoController(@Qualifier("swimCoach") Coach coach) {
         System.out.println("created: " + this.getClass().getSimpleName());
         this.coach = coach;
     }
