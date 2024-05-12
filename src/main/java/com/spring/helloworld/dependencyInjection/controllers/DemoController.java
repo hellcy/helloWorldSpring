@@ -18,6 +18,12 @@ public class DemoController {
         this.coach = coach;
     }
 
+    // setter injection
+    @Autowired
+    public void setCoach(Coach coach) {
+        this.coach = coach;
+    }
+
     @GetMapping("/dailyworkout")
     public String dailyWorkout() {
         return coach.getDailyWorkout();
