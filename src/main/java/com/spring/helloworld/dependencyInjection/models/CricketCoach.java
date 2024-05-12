@@ -1,5 +1,6 @@
 package com.spring.helloworld.dependencyInjection.models;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 // The @Component annotation marks this class as a Spring bean
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class CricketCoach implements Coach {
 
     public CricketCoach() {
-        System.out.println("Cricket Coach created");
+        System.out.println("created: " + this.getClass().getSimpleName());
     }
     @Override
     public String getDailyWorkout() {

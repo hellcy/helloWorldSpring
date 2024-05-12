@@ -35,3 +35,15 @@
 - when you have multiple implementations, `@Primary` is the default implementation that will be used.
 - No need to use the `@Qualifier` annotation when we have `@Primary`.
 - `@Qualifier` has higher priority and will override `@Primary`
+
+## Lazy Initialization
+- by default, all components are created when app starts
+- we can specify lazy initialization using `@Lazy` before class so it will only be initialized when
+  - it's needed for dependency injection
+  - it's explicitly requested
+- we can also set for all components in app properties file
+  ```
+  spring:
+    main:
+      lazy-initialization: true
+  ```
