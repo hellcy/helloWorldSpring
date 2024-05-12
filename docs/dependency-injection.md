@@ -5,6 +5,9 @@
   - recommended approach. Use this when  you have required dependencies (Your app can't work without it)
 - Setter Injection
   - when dependencies are optional and your app has default logic without them.
+- Field Injection (not recommended)
+  - hard to unit test
+  - inject by setting field values on your class directly using Java `reflection`
   
 ## Demo Example
 - Coach interface has 1 implementation: CricketCoach that will provide daily workouts
