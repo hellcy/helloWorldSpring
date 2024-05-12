@@ -47,3 +47,17 @@
     main:
       lazy-initialization: true
   ```
+  
+# Bean Scopes
+- Scopes are lifecycle about a bean
+- Default scope for a bean is Singleton
+
+## What is a Singleton?
+- Spring container creates only one instance of the bean, by default
+- it's cached in memory
+- All dependency injection for the bean will reference to the `SAME` bean
+- We can add `@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)` to ask Spring to create a new instance every time we need this dependency
+
+## Bean Lifecycle methods
+- You can add custom code during bean initialization/destruction
+- add `@PostConstruct` or `@PreDestroy` on a method
