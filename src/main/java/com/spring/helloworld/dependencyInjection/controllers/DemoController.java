@@ -24,10 +24,10 @@ public class DemoController {
     }
 
     // setter injection
-    @Autowired
-    public void setCoach(Coach coach) {
-        this.coach = coach;
-    }
+//    @Autowired
+//    public void setCoach(Coach coach) {
+//        this.coach = coach;
+//    }
 
 
     @GetMapping("/dailyworkout")

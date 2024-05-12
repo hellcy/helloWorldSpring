@@ -27,6 +27,11 @@
 - When Spring wants to inject Coach implementation, it will scan for `@Component`
 - When they find an implementation, it will inject it e.g. CricketCoach
 
-## Qualifier
+## Qualifier annotation
 - tell Spring which implementation to use when there are multiple available
 - Qualifier name is the name of the implementation class, except for the first character is lowercase
+
+## Primary annotation
+- when you have multiple implementations, `@Primary` is the default implementation that will be used.
+- No need to use the `@Qualifier` annotation when we have `@Primary`.
+- `@Qualifier` has higher priority and will override `@Primary`
